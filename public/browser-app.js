@@ -53,6 +53,7 @@ btnDOM.addEventListener('click', async () => {
 
     data.secret
   } catch (error) {
+    console.log(error.response)
     localStorage.removeItem('token')
     resultDOM.innerHTML = `<p>${error.response.data.msg}</p>`
   }
